@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhi-00-pvu">
+                                <rect key="frame" x="20" y="76" width="61.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresar nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c58-xu-vOd">
+                                <rect key="frame" x="20" y="104" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txtNombreChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="95k-1d-sHH"/>
+                                </connections>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqu-B1-MyI">
+                                <rect key="frame" x="20" y="191" width="374" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="RPH-Vr-n4q"/>
+                                    <constraint firstAttribute="height" constant="193" id="psq-cw-Gk0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryO-oh-gMu">
+                                <rect key="frame" x="20" y="153" width="115" height="30"/>
+                                <state key="normal" title="Seleccionar Foto"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nWg-Hg-9gH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCL-fW-SLB">
+                                <rect key="frame" x="20" y="413" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mostrar Graficas"/>
+                                <connections>
+                                    <action selector="btnMostrarGraficas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kx9-KH-wyn"/>
+                                    <segue destination="EPj-yH-m63" kind="show" id="Dq5-R6-bpp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ryO-oh-gMu" firstAttribute="top" secondItem="c58-xu-vOd" secondAttribute="bottom" constant="15" id="GH2-BY-vpF"/>
+                            <constraint firstItem="cqu-B1-MyI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KH0-Pz-ShY"/>
+                            <constraint firstItem="ryO-oh-gMu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NlK-8y-cIx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c58-xu-vOd" secondAttribute="trailing" constant="20" id="XH1-FC-UlT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ryO-oh-gMu" secondAttribute="trailing" constant="279" id="alV-PF-Trw"/>
+                            <constraint firstItem="c58-xu-vOd" firstAttribute="top" secondItem="Dhi-00-pvu" secondAttribute="bottom" constant="7.5" id="civ-td-HBf"/>
+                            <constraint firstItem="cqu-B1-MyI" firstAttribute="top" secondItem="ryO-oh-gMu" secondAttribute="bottom" constant="8" symbolic="YES" id="d6i-Kj-S1M"/>
+                            <constraint firstItem="c58-xu-vOd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="m3C-x4-81C"/>
+                            <constraint firstItem="Dhi-00-pvu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="maJ-Aq-1WE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cqu-B1-MyI" secondAttribute="trailing" constant="20" id="opS-qc-Hf5"/>
+                            <constraint firstItem="Dhi-00-pvu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="qq5-PO-WUZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPhoto" destination="ryO-oh-gMu" id="csO-mx-Y07"/>
+                        <outlet property="imgPhoto" destination="cqu-B1-MyI" id="KXk-UM-8z3"/>
+                        <outlet property="txtNombre" destination="c58-xu-vOd" id="2gQ-zp-dBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="61.607142857142854"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="avP-32-dKx">
+            <objects>
+                <viewController id="EPj-yH-m63" customClass="ViewController2" customModule="ExamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cka-C4-WzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2146"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oC-0e-bLq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="2146"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r20-DR-1pD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2146"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-fz-xEs" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="8" y="28" width="398" height="373"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="398" id="NFK-f4-4qH"/>
+                                                    <constraint firstAttribute="height" constant="373" id="uaW-nu-Q2G"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4G-Eb-wSr" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="8" y="409" width="398" height="373"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="398" id="2OX-qg-kCj"/>
+                                                    <constraint firstAttribute="height" constant="373" id="Lxn-OR-TzX"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JK-UP-thz" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="8" y="790" width="398" height="373"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="373" id="VHA-2T-qVQ"/>
+                                                    <constraint firstAttribute="width" constant="398" id="x2a-VA-L87"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieP-hi-2GC" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="8" y="1171" width="398" height="373"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="373" id="Lyk-X6-gjQ"/>
+                                                    <constraint firstAttribute="width" constant="398" id="Ymn-qp-GEt"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcP-Ik-hCs" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="8" y="1552" width="398" height="373"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="373" id="2y5-hc-ppf"/>
+                                                    <constraint firstAttribute="width" constant="398" id="Ohb-ah-TOT"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ieP-hi-2GC" firstAttribute="centerX" secondItem="r20-DR-1pD" secondAttribute="centerX" id="0Q3-Im-VDE"/>
+                                            <constraint firstAttribute="bottom" secondItem="gcP-Ik-hCs" secondAttribute="bottom" constant="221" id="54O-mN-Ts9"/>
+                                            <constraint firstItem="4JK-UP-thz" firstAttribute="top" secondItem="F4G-Eb-wSr" secondAttribute="bottom" constant="8" symbolic="YES" id="58L-M2-qmg"/>
+                                            <constraint firstItem="F4G-Eb-wSr" firstAttribute="centerX" secondItem="r20-DR-1pD" secondAttribute="centerX" id="6MI-Fs-S5b"/>
+                                            <constraint firstItem="F4G-Eb-wSr" firstAttribute="top" secondItem="1n5-fz-xEs" secondAttribute="bottom" constant="8" symbolic="YES" id="Bpc-be-f63"/>
+                                            <constraint firstItem="gcP-Ik-hCs" firstAttribute="top" secondItem="ieP-hi-2GC" secondAttribute="bottom" constant="8" symbolic="YES" id="GHS-9e-hKT"/>
+                                            <constraint firstItem="1n5-fz-xEs" firstAttribute="top" secondItem="r20-DR-1pD" secondAttribute="top" constant="28" id="kWy-Te-BeT"/>
+                                            <constraint firstItem="4JK-UP-thz" firstAttribute="centerX" secondItem="r20-DR-1pD" secondAttribute="centerX" id="lRb-06-tQC"/>
+                                            <constraint firstItem="1n5-fz-xEs" firstAttribute="centerX" secondItem="r20-DR-1pD" secondAttribute="centerX" id="qQG-ys-Hb5"/>
+                                            <constraint firstItem="ieP-hi-2GC" firstAttribute="top" secondItem="4JK-UP-thz" secondAttribute="bottom" constant="8" symbolic="YES" id="x3g-Rs-t16"/>
+                                            <constraint firstItem="gcP-Ik-hCs" firstAttribute="centerX" secondItem="r20-DR-1pD" secondAttribute="centerX" id="ykM-NV-Jb7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="r20-DR-1pD" secondAttribute="bottom" id="0d4-8Q-C1Y"/>
+                                    <constraint firstItem="r20-DR-1pD" firstAttribute="height" secondItem="5oC-0e-bLq" secondAttribute="height" priority="250" id="BRN-Hk-var"/>
+                                    <constraint firstItem="r20-DR-1pD" firstAttribute="width" secondItem="5oC-0e-bLq" secondAttribute="width" id="IYR-sG-AYD"/>
+                                    <constraint firstItem="r20-DR-1pD" firstAttribute="top" secondItem="5oC-0e-bLq" secondAttribute="top" id="L6e-Wc-Ydm"/>
+                                    <constraint firstItem="r20-DR-1pD" firstAttribute="leading" secondItem="5oC-0e-bLq" secondAttribute="leading" id="Qla-Q9-6kl"/>
+                                    <constraint firstAttribute="trailing" secondItem="r20-DR-1pD" secondAttribute="trailing" id="xj6-si-8Kw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zB2-Pb-yCe"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7mj-yU-XgV"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HoB-Jb-Nq9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5oC-0e-bLq" firstAttribute="bottom" secondItem="HoB-Jb-Nq9" secondAttribute="bottom" constant="34" id="6CZ-ew-1of"/>
+                            <constraint firstItem="5oC-0e-bLq" firstAttribute="leading" secondItem="HoB-Jb-Nq9" secondAttribute="leading" id="FXc-ai-oE5"/>
+                            <constraint firstItem="HoB-Jb-Nq9" firstAttribute="trailing" secondItem="5oC-0e-bLq" secondAttribute="trailing" id="GsM-ic-L8x"/>
+                            <constraint firstItem="5oC-0e-bLq" firstAttribute="top" secondItem="HoB-Jb-Nq9" secondAttribute="top" id="kfQ-6y-gG4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8QI-jH-XkG"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="1020"/>
+                    <size key="freeformSize" width="414" height="2200"/>
+                    <connections>
+                        <outlet property="pieChartView" destination="1n5-fz-xEs" id="TA2-yJ-zUo"/>
+                        <outlet property="pieChartView2" destination="F4G-Eb-wSr" id="cIP-kc-HvH"/>
+                        <outlet property="pieChartView3" destination="4JK-UP-thz" id="qx4-MN-fPH"/>
+                        <outlet property="pieChartView4" destination="ieP-hi-2GC" id="2PS-bg-GgU"/>
+                        <outlet property="pieChartView5" destination="gcP-Ik-hCs" id="S99-N6-J3k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YrU-qG-lgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860.86956521739137" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
